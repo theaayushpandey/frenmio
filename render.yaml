@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: frenmio-server
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5005
+      - key: ALLOW_ORIGIN
+        value: https://frenmio.vercel.app
