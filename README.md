@@ -111,6 +111,15 @@ frenmio/
 
 The Frontend imports the socket event types straight from `Backend/src/types.ts` (see `Frontend/src/state/types.ts`). The import is type-only, so it disappears at build time.
 
+## Credits
+
+Frenmio is based on [Mooz](https://github.com/muzam1l/mooz) by muzam1l, an open-source peer-to-peer video conferencing app. The video calls, screen share, chat, rooms and signalling server come from Mooz.
+
+My changes on top of it:
+
+- The server creates each session id and signs it with HMAC-SHA256, so nobody can reconnect as someone else. Messages are only relayed between two people in the same room.
+- The code is split into `Backend/` and `Frontend/` folders.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
